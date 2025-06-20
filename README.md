@@ -13,14 +13,6 @@ React + NestJS + TypeScript + PostgreSQL 기반의 정산내역 관리 웹 애�
 
 ## 기술 스택
 
-### 백엔드
-- **Framework**: NestJS
-- **Language**: TypeScript
-- **Database**: PostgreSQL
-- **ORM**: TypeORM
-- **Authentication**: JWT + Passport
-- **File Upload**: Multer
-- **CSV Parsing**: csv-parser
 
 ### 프론트엔드
 - **Framework**: React 18
