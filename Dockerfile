@@ -7,7 +7,7 @@ RUN npm install
 
 COPY . .
 
-# 디버깅용 build 결과 확인
+
 RUN npm run build && ls -la /app/build
 
 # Production stage
