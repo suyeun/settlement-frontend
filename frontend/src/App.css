@@ -1,0 +1,32 @@
+.App {
+  height: 100vh;
+}
+
+.ant-layout {
+  height: 100vh;
+}
+
+.ant-layout-sider {
+  background: #001529 !important;
+}
+
+.ant-layout-header {
+  background: #fff !important;
+  box-shadow: 0 1px 4px rgba(0,21,41,.08);
+  padding: 0 24px !important;
+}
+
+.ant-layout-content {
+  margin: 24px;
+  padding: 24px;
+  background: #fff;
+  border-radius: 8px;
+}
+
+.logo {
+  color: #fff;
+  font-size: 18px;
+  font-weight: bold;
+  padding: 16px 24px;
+  border-bottom: 1px solid #002140;
+} 
