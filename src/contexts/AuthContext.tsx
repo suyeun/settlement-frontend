@@ -51,7 +51,8 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     try {
       const response = await axios.post('/auth/login', { username, password });
       const { access_token, user: userData } = response.data;
-      
+      console.log('axios.defaults.baseURL', axios.defaults.baseURL)
+      console.log('response', response)
       localStorage.setItem('token', access_token);
       axios.defaults.headers.common['Authorization'] = `Bearer ${access_token}`;
       
