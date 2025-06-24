@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Form, Input, Button, message, Checkbox } from 'antd';
 import { useAuth } from '../contexts/AuthContext';
 import { useNavigate } from 'react-router-dom';
@@ -157,6 +157,15 @@ const Login: React.FC = () => {
   const navigate = useNavigate();
   const [rememberId, setRememberId] = useState(false);
   const [form] = Form.useForm();
+
+  useEffect(() => {
+    // 모든 쿠키 삭제
+    document.cookie.split(';').forEach((c) => {
+      document.cookie = c
+        .replace(/^ +/, '')
+        .replace(/=.*/, '=;expires=' + new Date().toUTCString() + ';path=/');
+    });
+  }, []);
 
   React.useEffect(() => {
     const savedId = localStorage.getItem('rememberedId');
