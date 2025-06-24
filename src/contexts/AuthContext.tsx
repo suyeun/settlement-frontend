@@ -48,8 +48,8 @@ export function AuthProvider({ children }: { children: ReactNode }) {
   }, []);
 
   const login = async (username: string, password: string) => {
+    const response = await axios.post('/auth/login', { username, password });
     try {
-      const response = await axios.post('/auth/login', { username, password });
       const { access_token, user: userData } = response.data;
       console.log('axios.defaults.baseURL!!!', axios.defaults.baseURL)
       console.log('response', response)
@@ -59,6 +59,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
       setUser(userData);
       setIsAuthenticated(true);
     } catch (error) {
+      console.log('axios.defaults.baseURL!!!', axios.defaults.baseURL)
       console.error('로그인 실패:', error);
       throw error;
     }
